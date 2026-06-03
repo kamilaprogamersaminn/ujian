@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 50% 50%, #eff4ff 0%, #d8e5ff 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 12px 40px 0 rgba(142, 171, 226, 0.3);
+}
+
+.container h1 {
+    color: #5c82ea;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #eff4ff 0%, #d8e5ff 100%);
+    padding: 12px 20px;
+    border-radius: 50px; /* untuk melengkung */
+    margin-bottom: 30px;
+    border: 1px solid #eae4d3;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    background-color:#4365c4;
+    color: white;
+}
+
+.menu b {
+    text-decoration: none;
+    color: #4365c4;
+    font-weight: 600;
+    font-size: 17px;
+    margin-right: 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-tambah {
+    background-color: #4365c4; /* Warna emas/kuning gelap sesuai gambar baru */
+    color: #ffffff;
+    padding: 10px 24px;
+    box-shadow: 0 4px 12px rgba(44, 66, 129, 0.25);
+}
+
+.btn-tambah:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    padding: 18px 20px;
+    color: #334155;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    vertical-align: middle;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Link aksi bawaan desktop */
+td a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 6px;
+    transition: all 0.2s ease;
+}
+
+td a:first-child {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+td a:first-child:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+td a:last-child {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+td a:last-child:hover {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    .navbar {
+        display: block; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;              
+        padding: 16px;
+        background: radial-gradient(circle at 50% 50%, #eff4ff 0%, #d8e5ff 100%);
+        border: 1px solid #eae4d3;
+        border-radius: 24px;
+        box-sizing: border-box;
+    }
+
+    .menu b {
+        font-family: sans-serif;
+        font-size: 12px;
+        color: #4365c4;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        padding-left: 4px;
+        display: block; 
+    }
+
+    .menu a {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 12px 16px;    
+        font-size: 14px;
+        font-weight: 500;
+        color: #334155;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.6); /* transparan */
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        box-sizing: border-box;
+        transition: all 0.2s ease;
+    }
+
+    .menu a::after {
+        content: "➔";          
+        font-size: 12px;
+        color: #859bc9;
+        transition: transform 0.2s ease;
+    }
+
+    .menu a:hover, .menu a:active {
+        background-color: #ffffff;
+        color: #1e3a8a;
+        border-color: #bfdbfe;
+        padding-left: 20px;   
+    }
+
+    /* Membuat panah ikutan bergeser saat di-hover */
+    .menu a:hover::after {
+        transform: translateX(4px);
+        color: #1e3a8a;
+    }
+
+
+    table thead, tr th {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-radius: 16px;
+        padding: 10px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    }
+
+    table tr:last-child {
+        margin-bottom: 0;
+    }
+
+    table td {
+        text-align: right;
+        padding: 15px 12px;
+        border-bottom: 1px dashed rgba(226, 232, 240, 0.8); /* Garis putus-putus abu tipis */
+        position: relative;
+        font-size: 14px;
+        color: #475569;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+
+    table td::before {
+        position: absolute;
+        left: 12px;
+        top: 15px;
+        font-weight: 600;
+        color: #4365c4;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    table td:nth-child(1)::before { content: "ID ADMIN"; }
+    table td:nth-child(2)::before { content: "NAMA"; }
+    table td:nth-child(3)::before { content: "EMAIL"; }
+    table td:nth-child(4)::before { content: "PASSWORD"; }
+    table td:nth-child(5)::before { content: "AKSI"; }
+
+    td a {
+        padding: 6px 18px !important;
+        font-size: 13px;
+        border-radius: 10px;
+        margin: 0 !important;
+    }
+}

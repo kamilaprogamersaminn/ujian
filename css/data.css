@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 50% 50%, #eff4ff 0%, #d8e5ff 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 12px 40px 0 rgba(142, 171, 226, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #eff4ff 0%, #d8e5ff 100%);
+    padding: 12px 20px;
+    border-radius: 50px; /* untuk melengkung */
+    margin-bottom: 30px;
+    border: 1px solid #eae4d3;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    background-color:#4365c4;
+    color: white;
+}
+
+.menu b {
+    text-decoration: none;
+    color: #4365c4;
+    font-weight: 600;
+    font-size: 17px;
+    margin-right: 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+a[href="tambah1.php"] {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4365c4;
+    color: #ffffff;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+a[href="tambah1.php"]:hover {
+    background-color:  #4365c4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Desain Card Modern Mirip Gambar Contoh */
+.stat-card {
+    flex: 1;
+    min-width: 200px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2f5;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Bagian Teks di Dalam Card */
+.stat-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.stat-content p {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin: 5px 0 0 0;
+    font-weight: 500;
+}
+
+/* Bagian Ikon Bulat Bulat */
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Variasi Warna Card Pas dengan Topik */
+.bg-blue   { background-color: #e3f2fd; color: #1e88e5; }
+.bg-green  { background-color: #e8f5e9; color: #43a047; }
+.bg-orange { background-color: #fff3e0; color: #fb8c00; }
+.bg-red    { background-color: #ffebee; color: #e53935; }
+.bg-purple { background-color: #f3e5f5; color: #8e24aa; }
+
+/* Styling Form Pencarian */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 10px 15px;
+    width: 320px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-cari {
+    padding: 10px 20px;
+    background-color: #5c82ea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-reset-pencarian {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.table {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: rgba(92, 130, 234, 0.1);
+    color: #4365c4;
+    font-weight: 600;
+    padding: 16px 20px;
+    border-bottom: 2px solid rgba(92, 130, 234, 0.2);
+}
+
+td {
+    padding: 16px 20px;
+    color: #4b5563;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nama-siswa {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.badge-no {
+    background: #e0eafd;
+    color: #3b82f6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+td a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+}
+
+td a[href^="edit.php"] {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+}
+
+td a[href^="edit.php"]:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+td a[href^="hapus.php"] {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+td a[href^="hapus.php"]:hover {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .navbar {
+        display: block; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;              
+        padding: 16px;
+        background: radial-gradient(circle at 50% 50%, #eff4ff 0%, #d8e5ff 100%);
+        border: 1px solid #eae4d3;
+        border-radius: 24px;
+        box-sizing: border-box;
+    }
+
+    .menu b {
+        font-family: sans-serif;
+        font-size: 12px;
+        color: #4365c4;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        padding-left: 4px;
+        display: block; 
+    }
+
+    .menu a {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 12px 16px;    
+        font-size: 14px;
+        font-weight: 500;
+        color: #334155;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.6); /* transparan */
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        box-sizing: border-box;
+        transition: all 0.2s ease;
+    }
+
+    .menu a::after {
+        content: "➔";          
+        font-size: 12px;
+        color: #859bc9;
+        transition: transform 0.2s ease;
+    }
+
+    .menu a:hover, .menu a:active {
+        background-color: #ffffff;
+        color: #1e3a8a;
+        border-color: #bfdbfe;
+        padding-left: 20px;   
+    }
+
+    /* Membuat panah ikutan bergeser saat di-hover */
+    .menu a:hover::after {
+        transform: translateX(4px);
+        color: #1e3a8a;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(92, 130, 234, 0.2);
+        border-radius: 12px;
+        padding: 10px 5px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    table tr:last-child {
+        margin-bottom: 0;
+    }
+
+    table td {
+        text-align: right;
+        padding: 12px 15px;
+        border-bottom: 1px dashed rgba(226, 232, 240, 1);
+        position: relative;
+        font-size: 14px;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+        text-align: center; 
+        padding-top: 15px;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 600;
+        color: #4365c4;
+    }
+
+    td:nth-of-type(1):before { content: "ID :"; }
+    td:nth-of-type(2):before { content: "No Daftar :"; }
+    td:nth-of-type(3):before { content: "Nama Lengkap :"; }
+    td:nth-of-type(4):before { content: "Jenis kelamin :"; }
+    td:nth-of-type(5):before { content: "asal Sekolah :"; }
+    td:nth-of-type(6):before { content: "No Telepon :"; }
+    td:nth-of-type(7):before { content: "Aksi :"; }
+    
+    td a.btn, td button {
+        padding: 6px 14px !important;
+        font-size: 13px !important;
+        border-radius: 8px !important;
+    }
+}   

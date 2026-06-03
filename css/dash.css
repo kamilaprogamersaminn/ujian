@@ -1,0 +1,134 @@
+body {
+    background-color: #dbeafe; /* Biru muda senada dengan form sebelumnya */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px; /* Lebar maksimal kesamping agar elegan di monitor */
+    margin: 0 auto;
+}
+
+.welcome-banner {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.welcome-banner h1 {
+    color: #1e40af; /* Biru tegas */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.welcome-banner p {
+    color: #475569;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Header Tabel --- */
+.table-header {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.table-header h2 {
+    color: #1e40af;
+    font-size: 1.5rem;
+    margin: 0 0 4px 0;
+}
+
+.table-header p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* --- Pembungkus Tabel Agar Bisa Scroll di HP --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Jika dibuka di HP kecil, tabel tidak rusak melainkan bisa digeser */
+    margin-bottom: 30px;
+}
+
+/* --- Desain Tabel Lebar Menyamping (Aesthetic & Clean) --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan spasi antar border kotak */
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden; /* Agar sudut tabel ikut melengkung lancar */
+    box-shadow: 0 10px 25px rgba(30, 41, 59, 0.04); /* Shadow super tipis */
+}
+
+/* Header Tabel */
+.data-table th {
+    background-color: #1e40af; /* Warna biru seragam */
+    color: #ffffff;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Isi Baris Tabel */
+.data-table td {
+    padding: 16px 20px;
+    color: #334155;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f5f9; /* Garis pembatas tipis antar pendaftar */
+}
+
+/* Efek Warna Selang Seling Baris (Zebra Striping) */
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* Baris genap berwarna abu-abu sangat muda */
+}
+
+/* Efek Sorot Kursus saat Mouse di Atas Baris */
+.data-table tbody tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+/* Jika data kosong */
+.text-center {
+    text-align: center !important;
+    color: #94a3b8 !important;
+    padding: 40px !important;
+}
+
+/* --- Tombol Kembali di Bawah --- */
+.action-area {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.btn-kembali {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #3a53a5;
+    border: 1px solid #cbd5e1;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    transition: all 0.2s ease;
+}
+
+.btn-kembali:hover {
+    background-color: #1e40af;
+    color: #ffffff;
+    border-color: #1e40af;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+}

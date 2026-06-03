@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2f7 0%, #e0e7ff 100%);
+    color: #1e3a8a; /* Warna indigo gelap sesuai tema */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    background: rgba(224, 231, 255, 0.8); /* Biru soft transparan dashboard */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Mengurangi padding agar tinggi kapsul lebih tipis dan proporsional */
+    padding: 10px 30px; 
+    border-radius: 50px; 
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    max-width: 1140px; 
+    width: 92%; 
+    margin: 20px auto; 
+    
+    /* Efek menempel saat di-scroll */
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.06);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: -0.5px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4f46e5; 
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: #1e3a8a;
+    background-color: rgba(255, 255, 255, 0.6); 
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 24px 120px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: #1e3a8a;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero span {
+    color: #3b82f6; /* Warna biru aksen terang */
+    display: inline-block;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Tombol Daftar */
+.tombol {
+    display: inline-block;
+    padding: 16px 45px;
+    background-color: #80b5e4; /* Muted Blue dari tema Anda */
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(85, 124, 159, 0.25);
+    transition: all 0.3s ease;
+}
+
+.tombol:hover {
+    background-color: #5593ce;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(85, 124, 159, 0.35);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 24px 120px 24px;
+}
+
+.judul-bagian {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+    color: #1e3a8a;
+}
+
+.judul-bagian::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #557c9f;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.grid-project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.kartu {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 45px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.kartu:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #557c9f;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(30, 58, 138, 0.06);
+}
+
+.kartu h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+.kartu p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+
+@media (max-width: 992px) {
+    .grid-project {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        margin: 12px auto;    
+        padding: 6px 14px;    
+        border-radius: 40px;  
+        width: 94%;           
+        top: 10px;            
+        flex-direction: row !important; 
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 0.85rem;   
+        font-weight: 800;
+        white-space: nowrap;  
+    }
+
+    .menu {
+        gap: 4px;            
+    }
+
+    .menu a {
+        font-size: 0.75rem;   
+        padding: 4px 8px;     
+        border-radius: 15px;
+        background-color: transparent; 
+    }
+
+    .menu a:hover, .menu a:active {
+        background-color: rgba(255, 255, 255, 0.4); 
+        color: #1e3a8a;
+    }
+    
+    .hero {
+        padding: 40px 16px 50px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.85rem;
+    }
+    
+    .grid-project {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .data {
+        width: 95%;
+        padding: 25px 20px; /* Mengecilkan padding di hp agar tidak terlalu sempit */
+        margin: 20px auto;
+    }
+
+    .data h1 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .input-group input, .btn-kirim {
+        padding: 14px 16px; /* Menyesuaikan ukuran jempol di layar HP */
+        font-size: 14px;
+    }
+}
