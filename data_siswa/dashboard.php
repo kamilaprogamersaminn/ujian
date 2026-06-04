@@ -1,7 +1,6 @@
 <?php
     include '../connect.php';
 
-    // Mengambil data pendaftar dari database tabel 'nama'
     $query = "SELECT * FROM siswa ORDER BY id DESC";
     $result = mysqli_query($conn, $query);
 ?>
@@ -32,9 +31,12 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nomor Daftar / Username</th>
-                        <th>Nama Lengkap / Email</th>
-                        <th>Jenis Kelamin / Password</th>
+                        <th>Nomor Daftar</th>
+                        <th>Nama Lengkap</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Asal Sekolah</th>
+                        <th>Jurusan</th>
+                        <th>Nomor Telepon</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,14 +45,17 @@
                         $no = 1;
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
-                            echo "<td>" . $no++ . "</td>";
-                            echo "<td>" . htmlspecialchars($row['nomor_daftar']) . "</td>";
-                            echo "<td>" . htmlspecialchars($row['nama_lengkap']) . "</td>";
-                            echo "<td>" . htmlspecialchars($row['jenis_kelamin']) . "</td>";
+                            echo "<td data-label='No'>" . $no++ . "</td>";
+                            echo "<td data-label='Nomor Daftar'>" . htmlspecialchars($row['nomor_daftar']) . "</td>";
+                            echo "<td data-label='Nama Lengkap'>" . htmlspecialchars($row['nama_lengkap']) . "</td>";
+                            echo "<td data-label='Jenis Kelamin'>" . htmlspecialchars($row['jenis_kelamin']) . "</td>";
+                            echo "<td data-label='Asal Sekolah'>" . htmlspecialchars($row['asal_sekolah']) . "</td>";
+                            echo "<td data-label='Jurusan'>" . htmlspecialchars($row['jurusan_pilihan']) . "</td>";
+                            echo "<td data-label='Nomor Telepon'>" . htmlspecialchars($row['nomor_telpon']) . "</td>";
                             echo "</tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='4' class='text-center'>Belum ada data pendaftar.</td></tr>";
+                        echo "<tr><td colspan='7' class='text-center'>Belum ada data pendaftar.</td></tr>";
                     }
                     ?>
                 </tbody>

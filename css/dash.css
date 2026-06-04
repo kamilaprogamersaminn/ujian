@@ -1,5 +1,5 @@
 body {
-    background-color: #dbeafe; /* Biru muda senada dengan form sebelumnya */
+    background-color: #dbeafe; 
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 40px 20px;
@@ -9,7 +9,7 @@ body {
 
 .dashboard-container {
     width: 100%;
-    max-width: 1200px; /* Lebar maksimal kesamping agar elegan di monitor */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
@@ -59,19 +59,19 @@ body {
     margin-bottom: 30px;
 }
 
-/* --- Desain Tabel Lebar Menyamping (Aesthetic & Clean) --- */
+/* --- Desain Tabel Lebar Menyamping --- */
 .data-table {
     width: 100%;
     border-collapse: collapse; /* Menghilangkan spasi antar border kotak */
     background-color: #ffffff;
     border-radius: 16px;
     overflow: hidden; /* Agar sudut tabel ikut melengkung lancar */
-    box-shadow: 0 10px 25px rgba(30, 41, 59, 0.04); /* Shadow super tipis */
+    box-shadow: 0 10px 25px rgba(30, 41, 59, 0.04); 
 }
 
 /* Header Tabel */
 .data-table th {
-    background-color: #5c82ea; /* Warna biru seragam */
+    background-color: #5c82ea; 
     color: #ffffff;
     text-align: left;
     padding: 16px 20px;
@@ -90,10 +90,9 @@ body {
 
 /* Efek Warna Selang Seling Baris (Zebra Striping) */
 .data-table tbody tr:nth-child(even) {
-    background-color: #f8fafc; /* Baris genap berwarna abu-abu sangat muda */
+    background-color: #f8fafc; 
 }
 
-/* Efek Sorot Kursus saat Mouse di Atas Baris */
 .data-table tbody tr:hover {
     background-color: #f1f5f9;
     transition: background-color 0.2s ease;
@@ -122,7 +121,7 @@ body {
     border-radius: 10px;
     font-size: 0.95rem;
     font-weight: 600;
-    text-decoration: none; /* Menghilangkan garis bawah link */
+    text-decoration: none;
     transition: all 0.2s ease;
 }
 
@@ -131,4 +130,87 @@ body {
     color: #ffffff;
     border-color: #1e40af;
     box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+}
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .dashboard-container {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .welcome-banner {
+        padding: 20px 15px;
+    }
+
+    .welcome-banner h1 {
+        font-size: 20px;
+    }
+
+    /* ---- RESPONSIVE TABEL MENJADI KARTU VERTIKAL ---- */
+    .data-table thead {
+        display: none; 
+    }
+
+    .data-table, 
+    .data-table tbody, 
+    .data-table tr, 
+    .data-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .data-table tr {
+        margin-bottom: 20px;
+        background: #ffffff;
+        border: 1px solid rgba(92, 130, 234, 0.2);
+        border-radius: 12px;
+        padding: 10px 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .data-table tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .data-table td {
+        text-align: right;
+        padding: 12px 15px;
+        border-bottom: 1px dashed rgba(226, 232, 240, 1);
+        position: relative;
+        font-size: 14px;
+    }
+
+    .data-table td:last-child {
+        border-bottom: none; 
+    }
+
+    .data-table td::before {
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 600;
+        color: #4365c4;
+    }
+
+    td:nth-of-type(1):before { content: "No :"; }
+    td:nth-of-type(2):before { content: "Nomor Daftar :"; }
+    td:nth-of-type(3):before { content: "Nama Lengkap :"; }
+    td:nth-of-type(4):before { content: "Jenis Kelamin :"; }
+    td:nth-of-type(5):before { content: "Asal Sekolah :"; }
+    td:nth-of-type(6):before { content: "Jurusan :"; }
+    td:nth-of-type(7):before { content: "Nomor Telepon :"; }
+
+    .data-table td.text-center {
+        text-align: center !important;
+        padding: 30px 15px !important;
+    }
+    
+    .data-table td.text-center::before {
+        display: none; 
+    }
 }
