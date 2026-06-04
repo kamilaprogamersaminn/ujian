@@ -37,7 +37,7 @@
     </nav>
 
     <section class="hero" id="home">
-        <h1>Penerimaan Siswa Baru <br><span>SMK Riyadhul Ulum</span></h1>
+        <h1>Penerimaan Siswa Baru <br><span>SMK Riyadhul Ulum</span><br><span>2026-2027</span> </h1>
         <p>Membentuk Generasi Berkarakter, Terampil, dan Siap Kerja di Era Digital.</p>
         <a href="../index2.php" class="tombol">DAFTAR SEKARANG</a>
     </section>
