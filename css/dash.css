@@ -20,7 +20,7 @@ body {
 }
 
 .welcome-banner h1 {
-    color: #1e40af; /* Biru tegas */
+    color: #5c82ea; 
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0 0 12px 0;
@@ -41,7 +41,7 @@ body {
 }
 
 .table-header h2 {
-    color: #1e40af;
+    color: #5c82ea;
     font-size: 1.5rem;
     margin: 0 0 4px 0;
 }
@@ -71,7 +71,7 @@ body {
 
 /* Header Tabel */
 .data-table th {
-    background-color: #1e40af; /* Warna biru seragam */
+    background-color: #5c82ea; /* Warna biru seragam */
     color: #ffffff;
     text-align: left;
     padding: 16px 20px;
@@ -127,7 +127,7 @@ body {
 }
 
 .btn-kembali:hover {
-    background-color: #1e40af;
+    background-color: #5c82ea;
     color: #ffffff;
     border-color: #1e40af;
     box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);

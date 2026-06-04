@@ -229,6 +229,11 @@ tbody tr:hover {
     font-weight: 600;
 }
 
+td:nth-of-type(7):before { 
+    content: ""; /* <--- HAPUS ATAU HAPUS BARIS INI */
+    font-weight: bold;
+}
+
 td a {
     text-decoration: none;
     font-size: 13px;
