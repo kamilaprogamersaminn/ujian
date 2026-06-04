@@ -85,7 +85,7 @@
                         
                         <div class="input-group">
                             <label>Nomor Telepon</label>
-                            <input type="text" name="nomor_telpon" placeholder="Nomor Telepon Anda" required>
+                            <input type="text" name="nomor_telpon" placeholder="Contoh: 082256179815" required>
                         </div>
 
                             <button type="submit" name="simpan" class="tombol">Konfirmasi</button>
