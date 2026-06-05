@@ -30,6 +30,7 @@
     <nav>
         <div class="logo">SMK Riyadhul Ulum</div>
         <div class="menu">
+            <a href="#home">Home</a>
             <a href="#jurusan">Jurusan</a>
             <a href="login.php">Login Admin</a>
         </div>
