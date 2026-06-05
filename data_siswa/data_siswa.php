@@ -9,6 +9,7 @@
                         nama_lengkap LIKE '%$keyword%' OR 
                         nomor_daftar LIKE '%$keyword%' OR 
                         asal_sekolah LIKE '%$keyword%' OR
+                        jenis_kelamin LIKE '%$keyword%' OR
                         jurusan_pilihan LIKE '%$keyword%'";
     } else {
         $query_tabel = "SELECT * FROM siswa";
@@ -53,7 +54,7 @@
 
         <div class="navbar">
             <div class="menu">
-                <b>Menu-Nav</b>
+                <b>ADMIN-PANEL</b>
                 <a href="../keluar.php">Kelola Keluar</a>
                 <a href="../index.php">Beranda Utama</a>
                 <a href="../admin/admin.php">Kelola Admin</a>

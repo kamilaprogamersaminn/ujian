@@ -18,7 +18,7 @@
             
             <div class="navbar">
                 <div class="menu">
-                    <b>Menu-Nav</b>
+                    <b>ADMIN-PANEL</b>
                     <a href="../keluar.php">Kelola Keluar</a>  
                     <a href="../index.php">Beranda Utama</a>  
                     <a href="../admin/admin.php">Kelola Admin</a>

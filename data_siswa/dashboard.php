@@ -17,7 +17,7 @@
     <div class="dashboard-container">
         
         <div class="welcome-banner">
-            <h1>🎉 Selamat, Pendaftaran Berhasil!</h1>
+            <h1> Selamat, Pendaftaran Berhasil!</h1>
             <p>Akun Anda telah terbuat dan data pendaftaran Anda sudah aman tersimpan di dalam sistem database kami.</p>
         </div>
 

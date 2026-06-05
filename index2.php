@@ -5,7 +5,7 @@
     date_default_timezone_set('Asia/Jakarta');
 
     // Membuat nomor pendaftaran otomatis: Tanggal(d) Bulan(m) Tahun 2 digit(y) Jam(H) Menit(i) Detik(s)
-    $nomor_otomatis = date('dmyHis');
+    $nomor_otomatis = "PPDB-" . date('Ymd-His');
 
     if(isset($_POST['simpan'])) {
         // Mengambil data dari POST, termasuk nomor pendaftaran otomatis
